@@ -1,5 +1,5 @@
 FROM        python:3.6.4-slim
-MAINTAINER  dev@lhy.kr
+MAINTAINER  johnsuh94@gmail.com
 
 # apt-get으로 nginx, supervisor설치
 RUN         apt-get -y update
@@ -32,6 +32,6 @@ RUN         ln -sf /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/
 COPY	    .config/dev/supervisord.conf /etc/supervisor/conf.d/
 
 # Stop Nginx, Run supervisor
-EXPOSE 80 8000
+EXPOSE      80
 CMD         pkill gunicorn; pkill nginx
 CMD         suprvisord -n

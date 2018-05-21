@@ -200,3 +200,7 @@ venv.bak/
 
 
 # End of https://www.gitignore.io/api/git,macos,python,pycharm
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
