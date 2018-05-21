@@ -1,0 +1,11 @@
+aiofiles==0.3.2
+aioredis==1.1.0
+async-timeout==3.0.0
+gunicorn==19.8.1
+hiredis==0.2.0
+httptools==0.0.11
+python-json-logger==0.1.8
+sanic==0.7.0
+ujson==1.35
+uvloop==0.9.1
+websockets==4.0.1
