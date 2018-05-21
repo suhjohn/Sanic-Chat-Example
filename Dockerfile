@@ -35,4 +35,4 @@ COPY	    .config/dev/supervisord.conf /etc/supervisor/conf.d/
 # Stop Nginx, Run supervisor
 EXPOSE      80
 CMD         pkill gunicorn; pkill nginx
-CMD         suprvisord -n
+CMD         supervisord -n
