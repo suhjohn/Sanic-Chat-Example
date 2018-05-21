@@ -1,4 +1,4 @@
-FROM        amazon/aws-eb-python:3.4.2-onbuild-3.5.1
+FROM        python:3.6.4-slim
 MAINTAINER  johnsuh94@gmail.com
 
 # apt-get으로 nginx, supervisor설치
