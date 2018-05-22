@@ -1,5 +1,7 @@
 import aioredis
 
+from chat_example import config
+
 
 class RedisConnection:
     def __init__(self):
@@ -14,7 +16,7 @@ class RedisConnection:
 
     async def connect(self):
         self._pool = await aioredis.create_pool(
-            'redis://localhost',
+            config.REDIS_HOSTNAME,
             minsize=5, maxsize=10
         )
 

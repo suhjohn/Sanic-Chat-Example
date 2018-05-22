@@ -3,11 +3,11 @@
 bind = '0.0.0.0:8000'
 backlog = 2048
 
-workers = 4
+workers = 1
 worker_class = 'sanic.worker.GunicornWorker'
 worker_connections = 4000
 timeout = 30
-keepalive = 2
+keepalive = 3
 
 socket = '/tmp/app.sock'
 
@@ -16,6 +16,8 @@ umask = 0
 user = None
 group = None
 tmp_upload_dir = None
+
+logconfig = '/srv/app/.config/dev/gunicorn/logging.conf'
 
 
 # Server hooks
