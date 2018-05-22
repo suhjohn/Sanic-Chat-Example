@@ -16,7 +16,7 @@ class RedisConnection:
 
     async def connect(self):
         self._pool = await aioredis.create_pool(
-            config.REDIS_HOSTNAME,
+            (config.REDIS_HOSTNAME, config.REDIS_PORT),
             minsize=5, maxsize=10
         )
 
