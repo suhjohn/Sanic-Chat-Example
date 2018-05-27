@@ -10,7 +10,6 @@ class RedisConnection:
 
     async def get_redis(self):
         if not self._pool:
-            print("connecting again")
             await self.connect()
         return self._pool
 
