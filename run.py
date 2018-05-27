@@ -1,6 +1,6 @@
 import os
 
-from chat_example.app import app
+from backend.app import app
 
 
 def main(debug=False, run=True):
