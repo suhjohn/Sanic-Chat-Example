@@ -1,6 +1,7 @@
 .idea/
 .python-version
 .config_secret/
+frontend/
 
 # Created by https://www.gitignore.io/api/git,macos,python,pycharm
 

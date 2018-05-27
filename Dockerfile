@@ -1,12 +1,12 @@
 FROM        python:3.6.4-slim
 MAINTAINER  johnsuh94@gmail.com
+ENV         APP_ENV DEV
 
-# apt-get으로 nginx, supervisor설치
+# apt-get으로 nginx, supervisor, vim 설치
 RUN         apt-get -y update
 RUN         apt-get -y dist-upgrade
-RUN         apt-get -y install build-essential nginx supervisor
+RUN         apt-get -y install build-essential nginx supervisor vim
 
-WORKDIR     /
 # Copy and move to project folder
 COPY        . /srv/app
 WORKDIR     /srv/app
@@ -29,7 +29,6 @@ RUN         ln -sf /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/
 
 
 # Supervisor
-
 COPY	    .config/dev/supervisord.conf /etc/supervisor/conf.d/
 
 # Stop Nginx, Run supervisor
