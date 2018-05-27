@@ -7,7 +7,6 @@ RUN         apt-get -y update
 RUN         apt-get -y dist-upgrade
 RUN         apt-get -y install build-essential nginx supervisor vim
 
-WORKDIR     /
 # Copy and move to project folder
 COPY        . /srv/app
 WORKDIR     /srv/app
@@ -30,7 +29,6 @@ RUN         ln -sf /etc/nginx/sites-available/app.conf /etc/nginx/sites-enabled/
 
 
 # Supervisor
-
 COPY	    .config/dev/supervisord.conf /etc/supervisor/conf.d/
 
 # Stop Nginx, Run supervisor

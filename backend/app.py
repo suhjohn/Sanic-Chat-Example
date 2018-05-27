@@ -1,6 +1,6 @@
 from sanic import Sanic
 
-from chat_example.redis import redis_conn_pub, redis_conn_sub
+from .redis import redis_conn_pub, redis_conn_sub
 
 app = Sanic(__name__)
 

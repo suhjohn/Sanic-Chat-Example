@@ -1,6 +1,6 @@
 import aioredis
 
-from chat_example import config
+from . import config
 
 
 class RedisConnection:

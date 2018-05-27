@@ -1,6 +1,6 @@
 from sanic import Blueprint
 
-from chat_example.views import chat, index
+from .views import chat, index
 
 bp = Blueprint(__name__.split('.')[0], url_prefix='/')
 
